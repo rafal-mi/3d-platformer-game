@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqgddjfvhidm6"]
+[gd_scene load_steps=4 format=3 uid="uid://bqgddjfvhidm6"]
+
+[ext_resource type="PackedScene" uid="uid://bv6pnm30wjdqr" path="res://block.tscn" id="1_mxvla"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y7dj4"]
 size = Vector3(10, 0.5, 10)
@@ -23,3 +25,16 @@ shape = SubResource("BoxShape3D_xh18k")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 2)
+shadow_enabled = true
+
+[node name="Block1" parent="." instance=ExtResource("1_mxvla")]
+transform = Transform3D(0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 0, 2.76549, 0)
+
+[node name="Block2" parent="." instance=ExtResource("1_mxvla")]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 4.76549, 0)
+
+[node name="Block3" parent="." instance=ExtResource("1_mxvla")]
+transform = Transform3D(0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0, 0, 1, 0.707107, 7.05838, 0)
+
+[node name="Block4" parent="." instance=ExtResource("1_mxvla")]
+transform = Transform3D(-2.98023e-08, -1, 0, 1, -2.98023e-08, 0, 0, 0, 1, -0.707107, 8.47259, 0)
